@@ -1,0 +1,15 @@
+.center {
+	margin: auto;
+	vertical-align: middle;
+	display: block;
+}
+
+body {
+    background-color: #000000 !important;
+}
+
+img {
+	width: auto;
+	height: 100%;
+}
+ 
