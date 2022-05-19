@@ -1,0 +1,275 @@
+/* EFFECTS */
+@keyframes appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* GENERAL SETTINGS */
+:root {
+  background-color: #eeeeee;
+  color: #606060;
+  font-weight: bold;
+  font-family: Helvetica;
+}
+
+a {
+  text-decoration: none;
+}
+
+section,
+footer,
+div.bottom-section {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0844a4;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  text-transform: none;
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+/* BLOCK -- Header */
+header {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      rgba(230, 223, 223, 0.5),
+      rgba(202, 200, 200, 0.726)
+    ),
+    url("/img/main.jpg") no-repeat center / contain;
+}
+
+header .button-mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1765e4;
+  border: solid 2px #0844a4;
+  color: #ffffff;
+  width: 35%;
+  height: 20%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+header .button-mid a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
+header .page-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px #0844a4;
+  position: relative;
+  width: 50%;
+  height: 30%;
+  left: 25%;
+  top: 35%;
+}
+
+/* BLOCK -- About */
+.profile-img {
+  max-width: 20%;
+}
+
+/* BLOCK -- Experience */
+section.block-experience {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.block-experience div {
+  flex-basis: 30%;
+  margin: 1%;
+  height: 50%;
+}
+
+section.block-experience span {
+  text-align: center;
+  display: inline-block;
+  border: solid 2px #000000;
+  color: #000000;
+  border-radius: 10px;
+  width: 20%;
+  margin: 1%;
+  padding: 0.5%;
+}
+
+section.block-experience div.left-side,
+section.block-experience div.right-side {
+  border: solid 3px #e4e4e4;
+}
+
+/* BLOCK -- Interests */
+section.block-interests {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.block-interests * {
+  flex-basis: 40%;
+  margin: 1.5%;
+}
+
+section.block-interests .interests-1 {
+  opacity: 0;
+  animation: appearance 3s forwards;
+}
+
+section.block-interests .interests-2 {
+  opacity: 0;
+  animation: appearance 3s forwards 3s;
+}
+
+/* BLOCK -- Bottom-Section */
+div.bottom-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* BLOCK -- Get in touch */
+input,
+textarea {
+  padding: 1%;
+}
+
+section.block-getintouch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block-getintouch form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.block-getintouch form textarea {
+  flex-basis: 100%;
+  border: solid 2px #0844a4;
+}
+
+.block-getintouch form input {
+  flex-basis: 35%;
+  margin: 1.5% 1.5% 0 0;
+  height: 10%;
+  border: solid 2px #0844a4;
+}
+
+.block-getintouch form button {
+  background-color: #0844a4;
+  color: #ffffff;
+  flex-basis: 21.7%;
+  margin-top: 1.5%;
+  height: 17.5%;
+  border: none;
+}
+
+.block-getintouch form button:hover {
+  background-color: #000000;
+  color: #98f759;
+  font-weight: bold;
+  transform: scale(1.1);
+  transition-property: background-color, color, transform, font-weight;
+  transition-timing-function: linear;
+  transition-duration: 0.7s;
+}
+
+/* BLOCK -- Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p::before {
+  content: "\00a9";
+}
+
+/* ELEMENTS -- Navigation */
+.menu ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu ul li {
+  border-right: solid 3px #e4e4e4;
+  padding: 5px 15px;
+}
+
+.menu ul li:last-child {
+  border-right: none;
+}
+
+nav li:hover {
+  background-color: #0844a4;
+  transform: scale(1.1);
+  transition-property: background-color, transform;
+  transition-timing-function: linear;
+  transition-duration: 0.7s;
+}
+
+nav li:hover a {
+  color: #ffffff;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+
+.menu-header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.menu-header ul {
+  justify-content: flex-end;
+}
+
+.menu-footer ul {
+  justify-content: center;
+}
+
+/* ELEMENTS -- Decoration */
+hr {
+  width: 15%;
+  border: 1px solid 606060;
+  margin-bottom: 1%;
+}
+
+hr.block-slicer {
+  width: 100%;
+  margin: 0;
+}
